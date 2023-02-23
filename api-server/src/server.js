@@ -4,7 +4,7 @@ const express = require('express');
 
 const notFoundHandler = require('./error-handlers/404.js');
 const errorHandler = require('./error-handlers/500.js');
-const logger = require('./auth/middleware/logger.js.js');
+const logger = require('./middleware/logger.js');
 const authRoutes = require('./auth/routes.js');
 
 const v1Routes = require('./routes/v1.js');
@@ -12,7 +12,7 @@ const v1Routes = require('./routes/v1.js');
 const app = express();
 
 app.use(express.json());
-
+app.use(authRoutes);
 app.use(logger);
 
 // assuming you are on port 3001:

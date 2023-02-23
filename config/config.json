@@ -2,7 +2,7 @@
   "development": {
     "username": "jrc2855",
     "password": null,
-    "database": "basic-auth-development",
+    "database": "auth-api-db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
